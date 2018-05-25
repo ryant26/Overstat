@@ -33,13 +33,13 @@ Please also keep in mind there is no builtin rate-limiting support, so it's on y
 Install through `npm`:
 
 ```shell
-$ npm install --save Overstat
+$ npm install --save overstat
 ```
 
 Example:
 
 ```js
-import overstat from 'overstat'
+const overstat = require('overstat');
 
 // Create a new overstat object. `overstat()` accepts an options
 // object (see below)
@@ -126,10 +126,6 @@ The following options are configurable.
   // method.
   defaultRegion: 'us',
   defaultPlatform: 'pc',
-
-  // Used to extract account details from the career link returned from the
-  // playoverwatch API
-  accountIdentityRegex: /^\/career\/([\w]+)\/.+$/,
 
   requestOptions: {
     baseURL: 'https://playoverwatch.com/en-us',
