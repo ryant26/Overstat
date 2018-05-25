@@ -10,9 +10,10 @@ Please also keep in mind there is no builtin rate-limiting support, so it's on y
 
 ## Differences from Oversmash
 - Actively maintained (we use this as a core dependency for [fireteam.gg](https://fireteam.gg))
-- No ES Modules, No Babel (Pending)
+- No ES Modules, No Babel
+- Converted async/await to promises for integration with our core project
 
-**Note: See [CHANGELOG.MD](/CHANGELOG.md) for change details**
+**Note: See [Releases](https://github.com/ryant26/overstat/releases) for release details**
 
 ## Features
 
