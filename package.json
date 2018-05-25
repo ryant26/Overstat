@@ -1,23 +1,25 @@
 {
-  "name": "oversmash",
-  "version": "1.3.3",
+  "name": "overstat",
+  "version": "1.4.0",
   "license": "MIT",
-  "homepage": "https://github.com/filp/oversmash",
+  "homepage": "https://github.com/ryant26/overstat",
   "description": "API wrapper for Blizzard's Overwatch player data",
-  "main": "./build/index.js",
+  "main": "./lib/index.js",
   "keywords": [
     "overwatch",
     "gaming",
     "api",
     "client",
     "scraper",
-    "oversmash"
+    "oversmash",
+    "overstat",
+    "overstats"
   ],
   "scripts": {
-    "start": "babel-node lib/index.js",
-    "test": "DEBUG=oversmash babel-node tests/test_oversmash.js",
-    "build": "rm -rf ./build && babel lib -d build",
-    "prepublish": "npm run build"
+    "start": "node lib/index.js",
+    "test": "./node_modules/mocha/bin/mocha tests/unitTests.js",
+    "lint": "./node_modules/eslint/bin/eslint.js .",
+    "build": "npm run lint && npm run test"
   },
   "dependencies": {
     "camelcase": "^4.1.0",
@@ -29,13 +31,11 @@
     "url-join": "^1.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.11.4",
-    "babel-preset-node6": "^11.0.0",
-    "babel-preset-stage-3": "^6.17.0",
-    "babel-core": "^6.18.2",
+    "chai": "^4.1.2",
     "eslint": "^3.12.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1"
+    "eslint-plugin-standard": "^2.0.1",
+    "mocha": "^5.2.0"
   }
 }

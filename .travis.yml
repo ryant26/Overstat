@@ -1,0 +1,32 @@
+# Branch Config
+branches:
+  only:
+  - master
+  - develop
+
+# Slack integration
+notifications:
+  slack:
+    rooms:
+      secure: rFtT/pJ7k1ThKrJZGG6jv7amyeReKQnqp2NLaeAYR+e2Aw8T4SxDYodfctE507lrr3PH4oHfNczglo1X+N5nWVNNzlx0oePHQKQjiSn0juvyGHr9i8auD1xSLhYMsqDx5tXbIuJODjQJAw41hnwBgehdVKVYIPsAlmEMD6ciu43y9b9bLQG+l3D4WE9WAM0TfvrcVWBrKB6cTWPhCpAU/FKgzVMKm/ccCw4Q7AY8GxijiTEgxjFGdpklXEIQzftw9mk/AHmoD/oL2N81M9XmbFWC/Q9Kwvf6+Lrq7uU9bGNPmw+va/W8f2osh6neRdCYQC7CndYZE6iBsZzueqH+Apkl9abd6meJkQUP/+GavpasPGaX8lDPJVPZ+cFiZQWrQAPQmcqsSHOdd6hN9ml9I9MczbJBPFJGnhY23qBux56bvP/eNejXyJFzg2/aKnz/+f38RTuQYHLGMnYZcrS1VUIsXgNV0DVtKKj+Cjjk09xkX08TtBXJ19s3edSGoyOTAiuk661tN5SOWTbc9i3VEPUEbppyVt4aH3RkJMy1RZNNGHoOFQQflt0dVxsDHfqdFnVb2G1+vR/mpDbj79OkG+c2v3jC6354uEApAdP+syjFennGCZPp8voMjcWjrYEIkQlyybLQPAnZxkWz+7mTC7SPgiTpq1gulLH68lYeWlU=
+    on_success: change
+    on_failure: always
+
+# Env setup
+language: node_js
+node_js: 8.8.1
+cache:
+  directories:
+  - node_modules
+
+# Build
+script: npm run build
+
+# Deploy
+deploy:
+  provider: npm
+  email: fireteam.gg@gmail.com
+  api_key:
+    secure: kxdEt23JeWB40j7lW4seWTrK23lgiZcuWzOCiqpCPX+DT7TmutyB2g5fxsjd8pHLwM0guZZZvdyBdLFDwKdIPTDkXk+H66JMGwPZw615tTOonlwHEI98qk0VlR9Vr10Q6z6VhMt+4Yznijxm5a6aMMtEO3WrtXqnO5vw/FYjjqLGLkPOEeRVQh03DqHNxybYyEHWHvmFK/FNivpsMydHKzrP8zFASvt66noPSGaDzYKcuc1EbcA6LDMX3S5iwWqdrUe5yZ/0U4HHJkpSVjRazKjUrlG/LywUgz8twBhtUOTHVrUYwVymZJQ2oVFxQYzdD00DIX80UJ/6C3DSyACs2oWgoS5AQ0ubszm+TftqlfHt7aYjgYMlZp8i2JWzeFer0iS/4U6RJUyGLoGR1SmaZr1OnXZLBlJqm4sTT6cKBXCQMhFlXkE7hEkNQyq0iVns7svKkVt60wLr3bPHVfsTorgLgFDjrR6VanmywU/ZViJJSNAIkI+LRzweBokqJlylkZQo+xWkOFN/QQGZJjILvftws6Si1AfECxu1PbRW8aISd12nVC48y7EE5+jGlC7AkM96bPVQ/H3F7S70WaZ5eh46bQbKxrOAxia1PfagCL/tAL08fjWb50oMZT8Y9odDkSCjJfx+0+Sn21iIWT3SV0AcqBJ7d6wcx9QYm9/dyRk=
+  on:
+    branch: master

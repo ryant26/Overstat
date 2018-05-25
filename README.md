@@ -1,4 +1,6 @@
-# oversmash [![npm version](https://badge.fury.io/js/oversmash.svg)](https://badge.fury.io/js/oversmash)
+# Overstat [![Build Status](https://travis-ci.org/ryant26/overstat.svg?branch=develop)](https://travis-ci.org/ryant26/overstat)
+
+*Forked from [Oversmash](https://github.com/filp/oversmash)*
 
 API wrapper for Blizzard's Overwatch player stats. Uses promises.
 
@@ -6,7 +8,12 @@ Blizzard does not expose an official API, so this library relies partially on sc
 
 Please also keep in mind there is no builtin rate-limiting support, so it's on you to use the library responsibly.
 
-**Note: See [CHANGELOG.MD](/CHANGELOG.md) for change details**
+## Differences from Oversmash
+- Actively maintained (we use this as a core dependency for [fireteam.gg](https://fireteam.gg))
+- No ES Modules, No Babel
+- Converted async/await to promises for integration with our core project
+
+**Note: See [Releases](https://github.com/ryant26/overstat/releases) for release details**
 
 ## Features
 
@@ -26,17 +33,17 @@ Please also keep in mind there is no builtin rate-limiting support, so it's on y
 Install through `npm`:
 
 ```shell
-$ npm install --save oversmash
+$ npm install --save Overstat
 ```
 
 Example:
 
 ```js
-import oversmash from 'oversmash'
+import overstat from 'overstat'
 
-// Create a new oversmash object. `oversmash()` accepts an options
+// Create a new overstat object. `overstat()` accepts an options
 // object (see below)
-const ow = oversmash()
+const ow = overstat()
 
 // Get basic details about a user, including their platform/region accounts.
 //
@@ -95,7 +102,7 @@ ow.playerStats('bob-12345', 'us', 'pc').then(player => {
 //               damage_done_most_in_game: 17491,
 //   /* ... etc ... */
 ```
-### `oversmash()` options
+### `overstat()` options
 
 The following options are configurable.
 
@@ -127,7 +134,7 @@ The following options are configurable.
   requestOptions: {
     baseURL: 'https://playoverwatch.com/en-us',
     headers: {
-      'User-Agent': 'https://github.com/filp/oversmash (hi jeff)'
+      'User-Agent': 'https://github.com/filp/overstat (hi jeff)'
     }
   }
 }
@@ -137,10 +144,10 @@ The following options are configurable.
 
 ## Debugging
 
-`oversmash` uses [debug](https://github.com/visionmedia/debug). Run your code calling oversmash with
-`DEBUG=oversmash` to enable debug logging
+`overstat` uses [debug](https://github.com/visionmedia/debug). Run your code calling overstat with
+`DEBUG=overstat` to enable debug logging
 
-## Stuff 🐝 🐝 🐝
+## Development 🐝 🐝 🐝
 
 See [`LICENSE.md`](/LICENSE.md) for license information
 
