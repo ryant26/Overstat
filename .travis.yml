@@ -4,6 +4,14 @@ branches:
   - master
   - develop
 
+# Slack integration
+notifications:
+  slack:
+    rooms:
+      secure: rFtT/pJ7k1ThKrJZGG6jv7amyeReKQnqp2NLaeAYR+e2Aw8T4SxDYodfctE507lrr3PH4oHfNczglo1X+N5nWVNNzlx0oePHQKQjiSn0juvyGHr9i8auD1xSLhYMsqDx5tXbIuJODjQJAw41hnwBgehdVKVYIPsAlmEMD6ciu43y9b9bLQG+l3D4WE9WAM0TfvrcVWBrKB6cTWPhCpAU/FKgzVMKm/ccCw4Q7AY8GxijiTEgxjFGdpklXEIQzftw9mk/AHmoD/oL2N81M9XmbFWC/Q9Kwvf6+Lrq7uU9bGNPmw+va/W8f2osh6neRdCYQC7CndYZE6iBsZzueqH+Apkl9abd6meJkQUP/+GavpasPGaX8lDPJVPZ+cFiZQWrQAPQmcqsSHOdd6hN9ml9I9MczbJBPFJGnhY23qBux56bvP/eNejXyJFzg2/aKnz/+f38RTuQYHLGMnYZcrS1VUIsXgNV0DVtKKj+Cjjk09xkX08TtBXJ19s3edSGoyOTAiuk661tN5SOWTbc9i3VEPUEbppyVt4aH3RkJMy1RZNNGHoOFQQflt0dVxsDHfqdFnVb2G1+vR/mpDbj79OkG+c2v3jC6354uEApAdP+syjFennGCZPp8voMjcWjrYEIkQlyybLQPAnZxkWz+7mTC7SPgiTpq1gulLH68lYeWlU=
+    on_success: change
+    on_failure: always
+
 # Env setup
 language: node_js
 node_js: 8.8.1
