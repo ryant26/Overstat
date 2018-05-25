@@ -1,4 +1,4 @@
-# Overstat [![npm version](https://badge.fury.io/js/oversmash.svg)](https://badge.fury.io/js/oversmash)
+# Overstat [![Build Status](https://travis-ci.org/ryant26/overstat.svg?branch=develop)](https://travis-ci.org/ryant26/overstat)
 
 *Forked from [Oversmash](https://github.com/filp/oversmash)*
 
