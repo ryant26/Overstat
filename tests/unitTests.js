@@ -11,6 +11,8 @@ const platform = 'pc';
 const lucioBattleNetId = 'DuncaChoc-1812';
 
 describe('Profile', function() {
+    this.timeout(timeout);
+
     it('Should return the correct name', function() {
         return ow.player(battleNetId).then((result) => {
             assert.equal(result.name, battleNetId);
