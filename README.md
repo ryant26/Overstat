@@ -1,4 +1,4 @@
-# Overstat [![Build Status](https://travis-ci.org/ryant26/overstat.svg?branch=develop)](https://travis-ci.org/ryant26/overstat) [![npm version](https://badge.fury.io/js/overstat.svg)](https://badge.fury.io/js/overstat)
+# Overstat (No Longer Maintained) [![Build Status](https://travis-ci.org/ryant26/overstat.svg?branch=develop)](https://travis-ci.org/ryant26/overstat) [![npm version](https://badge.fury.io/js/overstat.svg)](https://badge.fury.io/js/overstat)
 
 *Forked from [Oversmash](https://github.com/filp/oversmash)*
 
@@ -9,7 +9,6 @@ Blizzard does not expose an official API, so this library relies partially on sc
 Please also keep in mind there is no builtin rate-limiting support, so it's on you to use the library responsibly.
 
 ## Differences from Oversmash
-- Actively maintained (we use this as a core dependency for [fireteam.gg](https://fireteam.gg))
 - No ES Modules, No Babel
 - Converted async/await to promises for integration with our core project
 
